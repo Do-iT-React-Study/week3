@@ -1,11 +1,8 @@
 # week3
 
-## Hooks
+## Hooks 학습
 
 - useState
 - useEffect
-- useReducer
-- useMemo
-- useCallback
-- useRef
-- custom Hooks
+
+## 컴포넌트 반복 학습
