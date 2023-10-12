@@ -10,8 +10,9 @@ const Counter = () => {
       </p>
 
       {/* 이벤트 핸들링 실습 */}
-      <button>+1</button>
-      <button>-1</button>
+
+      <button onClick = {() => setValue(value + 1)}>+1</button>
+      <button onClick = {() => setValue(value - 1)}>-1</button>
     </div>
   );
 };
