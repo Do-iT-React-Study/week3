@@ -13,8 +13,7 @@ function App() {
     <div>
       {/* <button>{visible ? "숨기기" : "보이기"}</button>
       <hr /> */}
-      {/* <Counter /> */}
-      <IterationSample />
+      <Counter />
     </div>
   );
 }
