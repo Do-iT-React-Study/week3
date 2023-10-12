@@ -11,9 +11,13 @@ function App() {
 
   return (
     <div>
-      {/* <button>{visible ? "숨기기" : "보이기"}</button>
-      <hr /> */}
+      <button onClick={() => setVisible(!visible)}>
+        {visible ? "숨기기" : "보이기"}
+      </button>
+      <hr />
+      {visible && <Info />}
       <Counter />
+      <IterationSample />
     </div>
   );
 }

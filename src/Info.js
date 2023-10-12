@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 const Info = () => {
@@ -6,17 +6,27 @@ const Info = () => {
   const [name, setName] = useState("");
 
   //닉네임
+  const [nickname, setNickname] = useState("");
 
   const onChangeName = (e) => {
     setName(e.target.value);
   };
 
-  //useEffect 사용해보기
+  const onChangeNickname = (e) => {
+    setNickname(e.target.value);
+  };
+
+  //useEffect 사용해보기(변수가 바뀔때마다 실행됨)
+  useEffect(() => {
+    console.log("useEffect가 실행됨");
+    console.log("name", name);
+  }, [name]);
 
   return (
     <div>
       <div>
         <input value={name} onChange={onChangeName} />
+        <input value={nickname} onChange={onChangeNickname} />
       </div>
       <div>
         <div>
@@ -24,7 +34,7 @@ const Info = () => {
           {name}
         </div>
         <div>
-          <b>닉네임:</b>
+          <b>닉네임:{nickname}</b>
         </div>
       </div>
     </div>
